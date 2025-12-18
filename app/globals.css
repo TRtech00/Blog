@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 224 71.4% 4.1%;
+  --muted: 220 14.3% 95.9%;
+  --muted-foreground: 220 8.9% 46.1%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71.4% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 71.4% 4.1%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --primary: 242 76% 59%;
+  --primary-foreground: 210 20% 98%;
+  --secondary: 240 5% 96%;
+  --secondary-foreground: 220 8.9% 46.1%;
+  --accent: 255 92% 76%;
+  --accent-foreground: 224 71.4% 4.1%;
+  --ring: 242 76% 59%;
+  --radius: 24px;
+}
+
+.dark {
+  --background: 224 71% 4%;
+  --foreground: 210 20% 98%;
+  --muted: 220 14.3% 15.9%;
+  --muted-foreground: 220 9% 68%;
+  --popover: 224 71% 4%;
+  --popover-foreground: 210 20% 98%;
+  --card: 224 71% 4%;
+  --card-foreground: 210 20% 98%;
+  --border: 215 27% 16.9%;
+  --input: 215 27% 16.9%;
+  --primary: 242 76% 69%;
+  --primary-foreground: 224 71.4% 4.1%;
+  --secondary: 215 27% 16.9%;
+  --secondary-foreground: 210 20% 98%;
+  --accent: 199 89% 48%;
+  --accent-foreground: 224 71% 4%;
+  --ring: 242 76% 69%;
+}
+
+* {
+  @apply antialiased;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.prose pre {
+  border-radius: 24px;
+}
+
+.prose code:not(pre code) {
+  background: hsla(var(--muted),0.8);
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366f1, #a855f7);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

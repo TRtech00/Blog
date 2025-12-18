@@ -1,0 +1,35 @@
+---
+title: "Edge mimarisiyle performans"
+excerpt: "SSR, ISR ve kenar önbellekleme stratejilerini birleştirerek milisaniyelik yanıtlar elde etmek."
+coverImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80"
+authorName: "Mert Özkan"
+authorTitle: "Full-stack Mühendisi"
+dateISO: "2024-08-12"
+categories: ["Teknoloji", "Performans"]
+tags: ["edge", "nextjs", "cache"]
+featured: true
+views: 1930
+---
+
+## Kullanıcıya yakınlaştırmak
+
+Coğrafi olarak dağıtılmış edge node'ları sayesinde statik ve yarı dinamik içerikleri kullanıcıya birkaç milisaniyede ulaştırmak mümkün. Next.js 15 ile `app` yönlendirici, ISR ve Route Handlers birlikte çalışıyor.
+
+### Önbellek katmanları
+
+1. **CDN**: Görseller ve statik varlıklar için.
+2. **Edge cache**: HTML parçalarını saklar.
+3. **Origin**: Veritabanı veya API çağrıları.
+
+## Revalidate stratejisi
+
+ISR ile saniyeler seviyesinde `revalidate` belirleyerek hem güncellik hem hız sağlanabilir.
+
+```ts
+export const revalidate = 60;
+```
+
+### Ölçüm
+
+- Core Web Vitals için `Next.js Analytics` veya `Web Vitals` paketi kullanın.
+- Time To First Byte (TTFB) değerlerini edge bölgelere göre kıyaslayın.
