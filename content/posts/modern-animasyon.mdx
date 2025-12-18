@@ -1,0 +1,49 @@
+---
+title: "Arayüzlerde Mikro Animasyonun Gücü"
+excerpt: "Mikro animasyonlar ile kullanıcı deneyimini sakin ama etkili şekilde iyileştirmek için pratik öneriler."
+coverImage: "https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1600&q=80"
+authorName: "Nehir Çoban"
+authorTitle: "Ürün Tasarımcısı"
+dateISO: "2024-04-12"
+updatedISO: "2024-05-18"
+readingTime: "6 dk"
+categories:
+  - "Tasarım"
+  - "Animasyon"
+tags:
+  - "ui"
+  - "framer"
+  - "motion"
+featured: true
+views: 420
+---
+
+## Neden mikro animasyon?
+
+Kullanıcılar, arayüzdeki etkileşimlerin canlı ve anlaşılır olmasını bekliyor. Mikro animasyonlar; geri bildirim, yönlendirme ve duygu katmanı eklemek için kusursuz araçlardır.
+
+### Tutarlılık ve hız
+
+Her animasyon aynı hız eğrisini kullanmalı ve giriş/çıkış süreleri net olmalıdır. `ease-in-out` eğrisi ve 180-220ms aralığı çoğu durumda yeterlidir.
+
+## Tasarım ilkeleri
+
+- *Hiyerarşi*: Önemli aksiyonlar daha belirgin animasyonlar almalı.
+- *Sadelik*: Animasyonlar göz yormamalı, performansı düşürmemeli.
+- *Erişilebilirlik*: `prefers-reduced-motion` kontrolü mutlaka yapılmalı.
+
+### Motion sistemleri
+
+Bir motion kütüphanesi oluşturup hızlar, gecikmeler ve yay sabitleri gibi parametreleri paylaşmak, tüm ekip için ortak dil yaratır.
+
+## Kod tarafı
+
+```tsx
+const buttonVariants = {
+  rest: { scale: 1 },
+  hover: { scale: 1.02, boxShadow: "0 8px 40px rgba(0,0,0,0.12)" },
+  tap: { scale: 0.98 }
+};
+```
+
+Bu yaklaşımda hem üretkenlik hem de markaya özgü his korunur.
