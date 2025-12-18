@@ -1,0 +1,49 @@
+---
+title: "Next-level tasarım sistemleri"
+excerpt: "Animasyonlarla zenginleşen modern tasarım sistemlerinin nasıl üretileceğini adım adım anlatıyoruz."
+coverImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"
+authorName: "Elif Kaya"
+authorTitle: "Ürün Tasarımcısı"
+dateISO: "2024-09-01"
+updatedISO: "2024-09-12"
+categories: ["Tasarım", "UI/UX"]
+tags: ["tasarım sistemi", "animasyon", "framer-motion"]
+featured: true
+views: 1480
+---
+
+## Tasarım sisteminin özü
+
+Tutarlı bir deneyim oluşturmak için bileşenlerin davranışları, durumları ve hareketleri en baştan tanımlanmalıdır. `Motion` ve `Micro Interaction` kavramlarını ürün akışınıza nasıl eklediğinizi belgeleyin.
+
+### Bileşenleri davranışla tanımlamak
+
+- Durum listesi çıkarın: hover, focus, pressed, disabled.
+- Her durum için renk, gölge ve geçiş sürelerini belirleyin.
+- Başarılı etkileşimleri küçük ışımalar (glow) veya yayılmalarla ödüllendirin.
+
+## Motion rehberi
+
+Animasyonlar **gerçek dünyadaki** fizik kurallarını yansıtmalı. Yay sabitleri, gecikmeler ve hız eğrileri için tekil kaynak oluşturun.
+
+```ts
+const spring = {
+  type: 'spring',
+  stiffness: 170,
+  damping: 26,
+  mass: 1
+};
+```
+
+### Hiyerarşi ve vurgu
+
+Kullanıcının bakışını yönlendirmek için görsel hiyerarşi içinde hareketi de kullanın. En önemli aksiyon butonları 120-160ms arası giriş animasyonuna, daha arka plandaki kartlar 200-260ms aralığına sahip olabilir.
+
+## Ölçüm ve iterasyon
+
+- Animasyon FPS değerlerini ölçün, 60fps altına düşen sahneleri sadeleştirin.
+- Kullanıcı testlerinde algılanan hız ve memnuniyeti sorun listesine ekleyin.
+
+### Dokümantasyon
+
+Figma, Storybook ve canlı komponent kataloğu arasında tek kaynaklı dokümantasyon akışı kurarak tasarım borcunu azaltın.

@@ -1,0 +1,35 @@
+---
+title: "Kusursuz karanlık mod"
+excerpt: "Renk sistemleri, kontrast ve animasyon geçişleriyle karanlık modu premium hissettirmek."
+coverImage: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"
+authorName: "Selin Arslan"
+authorTitle: "Ön yüz Geliştirici"
+dateISO: "2024-07-28"
+categories: ["UI/UX"]
+tags: ["dark mode", "erişilebilirlik", "tasarım"]
+featured: false
+views: 980
+---
+
+## Kontrast kuralları
+
+AA ve AAA kontrast değerlerini sağlayan paletler oluşturun. Arka plan katmanları için opaklıkla oynayarak derinlik hissi yaratabilirsiniz.
+
+### Ton eşleştirme
+
+Işık ve gölge dengesi için `backdrop-filter` ve yumuşak gölgeler kullanın. Temalar arasında geçiş yaparken `prefers-reduced-motion` tercihine saygı duyun.
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+```
+
+## Parlaklık tuzakları
+
+- Saf beyaz metin kullanmayın, %90-92 parlaklık daha iyi.
+- Doygun neon tonları yerine pastel vurgular seçin.
+- Kenar belirginliğini artırmak için ince konturlar.
