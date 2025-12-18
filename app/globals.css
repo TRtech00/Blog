@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: 230 40% 98%;
+  --foreground: 230 15% 8%;
+  --card: 0 0% 100%;
+  --card-foreground: 230 15% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 230 15% 10%;
+  --primary: 252 85% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 230 16% 90%;
+  --secondary-foreground: 230 15% 20%;
+  --muted: 230 16% 90%;
+  --muted-foreground: 230 10% 40%;
+  --accent: 210 100% 65%;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 230 18% 85%;
+  --input: 230 18% 85%;
+  --ring: 252 85% 60%;
+  color-scheme: light;
+}
+
+.dark {
+  --background: 230 28% 6%;
+  --foreground: 230 12% 96%;
+  --card: 230 25% 8%;
+  --card-foreground: 230 12% 96%;
+  --popover: 230 25% 8%;
+  --popover-foreground: 230 12% 96%;
+  --primary: 252 85% 65%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 230 22% 14%;
+  --secondary-foreground: 230 12% 96%;
+  --muted: 230 20% 18%;
+  --muted-foreground: 230 12% 70%;
+  --accent: 210 100% 68%;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 72% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 230 22% 18%;
+  --input: 230 22% 18%;
+  --ring: 252 85% 65%;
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+a {
+  @apply text-primary underline-offset-4 hover:underline;
+}
+
+.prose {
+  @apply text-lg leading-8 max-w-none;
+}
+
+.prose pre {
+  @apply rounded-2xl border border-border/60 bg-gradient-to-br from-card to-muted text-sm shadow-xl;
+}
+
+.prose code {
+  @apply font-medium text-primary;
+}
+
+.prose img {
+  @apply rounded-2xl shadow-lg;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 9999px;
+}

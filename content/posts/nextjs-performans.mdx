@@ -1,0 +1,36 @@
+---
+title: "Next.js 15 ile performans odaklı blog mimarisi"
+excerpt: "App Router, MDX ve edge odaklı optimizasyonlarla yüksek performanslı blog mimarisi kurma rehberi."
+coverImage: "https://images.unsplash.com/photo-1523419400524-3170f66c5c1b?auto=format&fit=crop&w=1600&q=80"
+authorName: "Baran Yıldız"
+authorTitle: "Full-stack Mühendisi"
+dateISO: "2024-03-28"
+readingTime: "8 dk"
+categories:
+  - "Teknoloji"
+  - "Next.js"
+tags:
+  - "nextjs"
+  - "mdx"
+  - "seo"
+featured: true
+views: 512
+---
+
+## App Router avantajı
+
+App Router, veri getirme ve `loading` durumlarını basitleştirir. RSC sayesinde istemci tarafı JavaScript miktarı azalır.
+
+### MDX ve içerik
+
+MDX içerikleri `compileMDX` ile derleyip önbelleğe almak, hem tip güvenli hem de taşınabilir bir model sunar.
+
+## SEO stratejisi
+
+- Metadata API ile dinamik OpenGraph kartları
+- `sitemap` ve `robots` uçları
+- JSON-LD şemaları
+
+### Edge & CDN
+
+Statik olarak üretilen sayfalar CDN'e yakın teslim edilir; dinamik kısımlar için `dynamic = "force-static"` ayarı yeterlidir.
